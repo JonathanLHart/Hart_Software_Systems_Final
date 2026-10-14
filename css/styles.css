@@ -1,0 +1,23 @@
+body{
+    background-color: #c4bebe;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+h1{
+    color: #0611aa;
+}
+p{
+    color: #5505e9;
+}
+button{
+    width: 220px;
+    height: 24px;
+    border: 2px solid #00000057;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(13, 14, 14, 0.322);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(57, 240, 118, 0.35);
+}
