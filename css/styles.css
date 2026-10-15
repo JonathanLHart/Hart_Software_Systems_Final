@@ -21,3 +21,56 @@ button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 10px rgba(57, 240, 118, 0.35);
 }
+p {
+    color: #020005;
+    max-width: 65ch;
+    overflow-wrap: break-word;
+}
+.disclaimer {
+    font-family: Georgia, serif;
+    font-size: 10px;
+    font-style: italic;
+}
+body {
+    margin: 0;
+    background-color: #c4bebe;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.page {
+    width: min(900px, calc(100% - 2rem));
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+img {
+    display: block;
+    width: min(450px, 100%);
+    height: auto;
+    margin: 1rem auto;
+}
+.page header,
+.page > div,
+.page main,
+.page footer {
+    text-align: center;
+}
+.page p {
+    max-width: 65ch;
+    margin: 1rem auto;
+    text-align: left;
+}
+.home-link {
+    display: block;
+    text-align: center;
+    margin-top: auto;
+    padding-top: 1rem;
+}
+.page .back-link {
+    text-align: center;
+}
