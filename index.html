@@ -8,51 +8,53 @@
   </head>
   <body>
     <div class="page">
-    <header>
-      <h1>Welcome to Software Systems 110</h1>
-    </header>
-    <div>
-      <h4>Visitor Log</h4>
-      <h5>Please enter your name and email to the visitor log:</h5>
-        <form>
-        <label for="visitor-name">Name:</label>
-        <input type="text" id="visitor-name" name="name" required>
-          <br> <br>
-        <label for="visitor-email">Email:</label>
-        <input type="email" id="visitor-email" name="email" required>
-          <br><br>
-        <button id="add-visitor" type="submit">Add to Visitor Log</button>
-      </form>
-      <ul id="visitor-list"></ul>
-        <p class="disclaimer">Demonstration only: entries appear temporarily on this page and are not saved
-            or sent anywhere. Please do not enter real personal information.
-        </p>
-    </div>
-    <main>
-      <h2>Software Systems and Me</h2>
-           <a href="https://www.computerscience.org/careers/software-developer/" target="_blank">
-            <img src="images/Programmer-Goals-1024x684.jpg" height="300" alt="this is a picture of a Programer sitting on a dock with his laptop open and a sunset in the background with the words 'Smart Programmer Goals' in the sky"> 
-            </a> 
-            
-          <br>
-          <p> What are smart Goals? 
-        Smart goals are *specific, *measurable, *achievable, *relevant, and *time-bound objectives that help set clear targets and track progress effectively. They provide a structured framework for goal-setting, ensuring that goals are well-defined and attainable within a certain timeframe. By following the <a href="https://www.atlassian.com/blog/teamwork/how-to-write-smart-goals" target="_blank">SMART</a> criteria, individuals can increase their chances of success and maintain focus on their desired outcomes.
-        </p>
-        <br>
-        <button type="button" onclick="window.location.href='pages/workflow.html'">
-              Stages of Development Paths
-            </button> <br> <br>
-          
-    </main>
-    <footer>
-      <p>&copy; 2024 Jonathan Hart</p>
-      <div class="footer-links">
-        <a href="pages/about.html">Software Systems</a>
-        <a href="pages/hobbies.html">My Hobbies</a>
-        <a href="pages/program.html">My Journey</a>
-      </div>
-    </footer>
-    <script src="js/script.js"></script>
+      <header>
+        <h1>Welcome to Software Systems 110</h1>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="pages/Software_Systems.html">Software Systems</a>
+          <a href="pages/About_Me.html">About Me</a>
+          <a href="pages/My_Journey.html">My Journey</a>
+        </nav>
+      </header>
+      <main>
+        <section class="visitor-section" aria-labelledby="visitor-heading">
+          <h2 id="visitor-heading">Visitor Log Demo</h2>
+          <form class="visitor-form">
+            <div class="visitor-field">
+              <label for="visitor-name">Name</label>
+              <input type="text" id="visitor-name" name="name" required>
+            </div>
+            <div class="visitor-field">
+              <label for="visitor-email">Email</label>
+              <input type="email" id="visitor-email" name="email" required>
+            </div>
+            <button id="add-visitor" type="submit">Add to Visitor Log</button>
+          </form>
+          <ul id="visitor-list" aria-live="polite"></ul>
+          <p class="disclaimer">Demonstration only: entries appear temporarily on this page and are not saved or sent anywhere. Please do not enter real personal information.</p>
+        </section>
+        <section aria-labelledby="goals-heading">
+          <h2 id="goals-heading">Software Systems and Goals</h2>
+          <a href="https://www.computerscience.org/careers/software-developer/" target="_blank" rel="noopener noreferrer">
+            <img class="hero-image" src="images/Programmer-Goals-1024x684.jpg" alt="A programmer sitting by the water at sunset with a laptop, under the words Smart Programmer Goals.">
+          </a>
+          <p><strong>What are SMART goals?</strong><br>SMART goals are specific, measurable, achievable, relevant, and time-bound objectives that help set clear targets and track progress. They provide a structured framework for goal-setting and can help people stay focused on their desired outcomes. Learn more about the <a href="https://www.atlassian.com/blog/teamwork/how-to-write-smart-goals" target="_blank" rel="noopener noreferrer">SMART criteria</a> (Boogaard, 2023).</p>
+        </section>
+          <p class="source-reference">
+          Boogaard, K. (2023, December 26). How to write SMART goals (with examples).
+          Atlassian. <a href="https://www.atlassian.com/blog/teamwork/how-to-write-smart-goals" target="_blank" rel="noopener noreferrer">https://www.atlassian.com/blog/teamwork/how-to-write-smart-goals</a>
+          </p>
+      </main>
+      <footer>
+        <p>&copy; 2026 Jonathan Hart</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="pages/Software_Systems.html">Software Systems</a>
+          <a href="pages/About_Me.html">About Me</a>
+          <a href="pages/My_Journey.html">My Journey</a>
+        </nav>
+      </footer>
+      <script src="js/script.js"></script>
     </div>
   </body>
-  </html>
+</html>

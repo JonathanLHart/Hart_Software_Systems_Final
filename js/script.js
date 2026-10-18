@@ -1,14 +1,3 @@
-const page = document.querySelector(".page");
-const isHomePage = document.querySelector("#visitor-list");
-
-if (page && !isHomePage) {
-  const homeLink = document.createElement("a");
-  homeLink.href = new URL("../index.html", document.currentScript.src);
-  homeLink.textContent = "Back to Home";
-  homeLink.classList.add("home-link");
-  page.append(homeLink);
-}
-
 const visitorForm = document.querySelector("form");
 const addVisitorButton = document.querySelector("#add-visitor");
 const visitorList = document.querySelector("#visitor-list");
@@ -21,9 +10,20 @@ function addVisitor(event) {
     return;
   }
 
-  const name = document.querySelector("#visitor-name").value.trim();
-  const email = document.querySelector("#visitor-email").value.trim();
+  const nameInput = document.querySelector("#visitor-name");
+  const emailInput = document.querySelector("#visitor-email");
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
 
+  if (!name || !email) {
+    nameInput.setCustomValidity(name ? "" : "Please enter your name.");
+    emailInput.setCustomValidity(email ? "" : "Please enter your email address.");
+    visitorForm.reportValidity();
+    return;
+  }
+
+  nameInput.setCustomValidity("");
+  emailInput.setCustomValidity("");
   const listItem = document.createElement("li");
   listItem.textContent = `${name} — ${email}`;
   visitorList.append(listItem);
@@ -32,5 +32,9 @@ function addVisitor(event) {
 }
 
 if (visitorForm && addVisitorButton && visitorList) {
+  visitorForm.addEventListener("submit", addVisitor);
+  visitorForm.addEventListener("input", (event) => {
+    event.target.setCustomValidity("");
+  });
   addVisitorButton.addEventListener("click", addVisitor);
 }
