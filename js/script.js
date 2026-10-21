@@ -1,5 +1,4 @@
 const visitorForm = document.querySelector("form");
-const addVisitorButton = document.querySelector("#add-visitor");
 const visitorList = document.querySelector("#visitor-list");
 
 function addVisitor(event) {
@@ -31,10 +30,9 @@ function addVisitor(event) {
   visitorForm.reset();
 }
 
-if (visitorForm && addVisitorButton && visitorList) {
+if (visitorForm && visitorList) {
   visitorForm.addEventListener("submit", addVisitor);
   visitorForm.addEventListener("input", (event) => {
     event.target.setCustomValidity("");
   });
-  addVisitorButton.addEventListener("click", addVisitor);
 }
